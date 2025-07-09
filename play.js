@@ -2,6 +2,7 @@ const connect = require("./client.js");
 
 console.log("Connecting...");
 
+// setup for interface to handle user input from stdin
 const setupInput = function() {
   const stdin = process.stdin;
   stdin.setRawMode(true);
@@ -11,6 +12,7 @@ const setupInput = function() {
   return stdin;
 };
 
+// message for exiting the game via: CTRL + C 
 const handleUserInput = function(key) {
   if (key === '\u0003') {
     console.log("see ya!");
