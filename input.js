@@ -1,4 +1,5 @@
 let connection;
+const { userMessages, userMovements } = require("./constants");
 
 // setup for interface to handle user input from stdin
 const setupInput = function(conn) {
@@ -19,49 +20,28 @@ const handleUserInput = function(key) {
     process.exit();
   }
 
- 
+
   handleMovement(key);
   handleMessages(key);
 };
 
+loggedMovements = new Set();
+
 // container for movement keys
 const handleMovement = (key) => {
-  switch (key) {
-    case 'w':
-      connection.write("Move: up");
-      console.log("moving up in the world");
-      break;
-    case 'a':
-      connection.write("Move: left");
-      console.log("to the left, to the left");
-      break;
-    case 's':
-      connection.write("Move: down");
-      console.log("down we go!");
-      break;
-    case 'd':
-      connection.write("Move: right");
-      console.log("two wrongs !== a right");
-      break;
+  if (userMovements[key]) {
+    connection.write(userMovements[key].command);
+
+    if (!loggedMovements.has(key)) {
+      console.log(userMovements[key].log);
+      loggedMovements.add(key);
+    }
   }
 };
-
 // container for message keys
 const handleMessages = (key) => {
-  const messages = {
-    "1": "Say: slitherin on thru",
-    "2": "Say: shedding my past & u",
-    "3": "Say: ssspeedy lil snek",
-    "4": "Say: das in cold blood",
-    "5": "Say: watch your tail",
-    "6": "Say: hissss off",
-    "7": "Say: ssssry not sssry",
-    "8": "Say: NOM NOM NNOM",
-    "9": "Say: ctrl + c or u ded",
-    "0": "Say: who dis dangr noodl"
-  };
-  if (messages[key]) {
-    connection.write(messages[key]);
+  if (userMessages[key]) {
+    connection.write(userMessages[key]);
   }
 };
 
