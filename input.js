@@ -1,5 +1,6 @@
 let connection;
-const { userMessages, userMovements } = require("./constants");
+const { userMessages } = require("./constants");
+const handleMovement = require("./movement.js")
 
 // setup for interface to handle user input from stdin
 const setupInput = function(conn) {
@@ -13,31 +14,30 @@ const setupInput = function(conn) {
   return stdin;
 };
 
-// message for exiting the game via: CTRL + C 
+// message for exiting the game via: CTRL + C and clearing the screen on first key press/
 const handleUserInput = function(key) {
+
   if (key === '\u0003') {
     console.log("see ya!");
     process.exit();
   }
 
 
-  handleMovement(key);
+  handleMovement(key, connection, clearFirstScreen);
   handleMessages(key);
 };
 
-loggedMovements = new Set();
+let screenCleared = false;
 
-// container for movement keys
-const handleMovement = (key) => {
-  if (userMovements[key]) {
-    connection.write(userMovements[key].command);
-
-    if (!loggedMovements.has(key)) {
-      console.log(userMovements[key].log);
-      loggedMovements.add(key);
-    }
+const clearFirstScreen = () => {
+  if (!screenCleared) {
+    process.stdout.clearLine(0);
+    connection.write("Say: ")
+    screenCleared = true;
   }
 };
+
+
 // container for message keys
 const handleMessages = (key) => {
   if (userMessages[key]) {
@@ -52,3 +52,24 @@ const handleMessages = (key) => {
 module.exports = {
   setupInput,
 };
+
+
+// let lastDirection = null;
+// let resetTimer = null;
+// const handleMovement = (key) => {
+//   if (userMovements[key]) {
+//     connection.write(userMovements[key].command);
+
+//     if (key !== lastDirection) {
+//       console.log(userMovements[key].log);
+//     }
+
+//     clearTimeout(resetTimer);
+//     resetTimer = setTimeout(() => {
+//       lastDirection = null;
+//     }, 2000);
+
+//     lastDirection = key;
+
+//   }
+// };

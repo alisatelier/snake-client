@@ -3,6 +3,8 @@ const PORT = 50541;
 
 const userName = "L8R";
 
+let snekSpeed = "150"
+
 const userMessages = {
   "1": "Say: slitherin on thru",
   "2": "Say: shedding my past & u",
@@ -39,6 +41,7 @@ module.exports = {
   IP,
   PORT,
   userName,
+  snekSpeed,
   userMessages,
   userMovements,
 };
