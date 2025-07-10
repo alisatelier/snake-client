@@ -1,14 +1,14 @@
 const IP = 'localhost';
 const PORT = 50541;
 
-const userName = process.argv[2] || "SNK"
+const userName = process.argv[2] || "SNK";
 
 const speedSettings = {
   default: 150,
-  step: 50, 
+  step: 50,
   min: 50,
   max: 350,
-}
+};
 
 
 const userMessages = {

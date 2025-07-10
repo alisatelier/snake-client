@@ -1,5 +1,4 @@
 // prevents broadcasts from staying on the screen and affecting game visibility.
-
 const logTemporary = (message, duration = 5000) => {
   const lines = message.split('\n');
   for (const line of lines) {

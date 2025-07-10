@@ -9,9 +9,9 @@ const handleMessages = (key, connection) => {
     lastMessageKey = key;
   }
 
-   setTimeout(() => {
-      connection.write("Say: ");
-    }, 5000);
+  setTimeout(() => {
+    connection.write("Say: ");
+  }, 5000);
 };
 
 

@@ -12,12 +12,12 @@ const getCurrentDirection = () => currentDirection;
 const setCurrentDirection = (key) => { currentDirection = key; };
 
 // handle player moving by single key press
-const setMovementInterval = (connection, key) =>{
+const setMovementInterval = (connection, key) => {
   const move = userMovements[key];
-  if(!move) return
+  if (!move) return;
 
   clearInterval(movementInterval);
-  
+
   connection.write(move.command);
 
   movementInterval = setInterval(() => {

@@ -1,7 +1,7 @@
 const { handleMovement, getCurrentDirection, setCurrentDirection, setMovementInterval } = require("./movement.js");
 const handleMessages = require("./messages.js");
 const { increaseSpeed, decreaseSpeed, resetSpeed } = require("./speed");
-const { userMovements } = require("./constants.js")
+const { userMovements } = require("./constants.js");
 
 let connection;
 
