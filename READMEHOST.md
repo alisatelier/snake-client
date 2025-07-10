@@ -171,7 +171,6 @@ All names are 3-character, alphanumeric, and full of bite.
 | `BOI` | Try me. I dare you.            |
 | `GRR` | All jungle, no chill           |
 
----
 
 ### Its a Jungle in Here
 | Name | Vibe                            |
@@ -186,7 +185,6 @@ All names are 3-character, alphanumeric, and full of bite.
 | `DMV` | Danger Management Viper        |
 
 
----
 
 ### Ferda Code-Sneks
 
