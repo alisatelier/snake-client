@@ -7,9 +7,15 @@ const speedSettings = {
   default: 150,
   step: 50,
   min: 50,
-  max: 350,
+  max: 300,
 };
 
+const setSpeed = {
+  increase: "🟩: sssspeed mode: activated",
+  decrease: "🟥: woah there lil guy",
+  reset: "🟨: ahhh back to basics",
+
+};
 
 const userMessages = {
   "1": "Say: slitherin on thru",
@@ -50,4 +56,5 @@ module.exports = {
   userMessages,
   userMovements,
   speedSettings,
+  setSpeed,
 };

@@ -1,4 +1,4 @@
-const { speedSettings, userMovements } = require("./constants.js");
+const { speedSettings, setSpeed } = require("./constants.js");
 
 let snekSpeed = speedSettings.default;
 
@@ -11,7 +11,7 @@ const increaseSpeed = (connection) => {
     snekSpeed = speedSettings.min;
   }
 
-  console.log("🟩: sssspeed mode: activated");
+  console.log(setSpeed.increase);
   return snekSpeed;
 };
 
@@ -20,13 +20,13 @@ const decreaseSpeed = (connection) => {
   if (snekSpeed > speedSettings.max) {
     snekSpeed = speedSettings.max;
   }
-  console.log("🟥: woah there lil guy");
+  console.log(setSpeed.decrease);
   return snekSpeed;
 };
 
 const resetSpeed = () => {
   snekSpeed = speedSettings.default;
-  console.log("🟨: ahhh back to basics");
+  console.log(setSpeed.reset);
 };
 
 
