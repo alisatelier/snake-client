@@ -11,7 +11,7 @@ const increaseSpeed = (connection) => {
     snekSpeed = speedSettings.min;
   }
 
-  console.log("sssspeed mode: activated");
+  console.log("🟩: sssspeed mode: activated");
   return snekSpeed;
 };
 
@@ -20,12 +20,13 @@ const decreaseSpeed = (connection) => {
   if (snekSpeed > speedSettings.max) {
     snekSpeed = speedSettings.max;
   }
-  console.log("woah there lil guy");
+  console.log("🟥: woah there lil guy");
   return snekSpeed;
 };
 
 const resetSpeed = () => {
   snekSpeed = speedSettings.default;
+  console.log("🟨: ahhh back to basics")
 };
 
 

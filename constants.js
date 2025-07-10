@@ -1,7 +1,7 @@
 const IP = 'localhost';
 const PORT = 50541;
 
-const userName = "L8R";
+const userName = process.argv[2] || "SNK"
 
 const speedSettings = {
   default: 150,
@@ -27,19 +27,19 @@ const userMessages = {
 const userMovements = {
   "w": {
     command: "Move: up",
-    log: "movin up in the world"
+    log: "⬆️: movin up in the world"
   },
   "a": {
     command: "Move: left",
-    log: "to the left, to the left"
+    log: "⬅️: to the left, to the left"
   },
   "s": {
     command: "Move: down",
-    log: "down we go!"
+    log: "⬇️: down we go!"
   },
   "d": {
     command: "Move: right",
-    log: "two wrongs !== a right"
+    log: "➡️: two wrongs !== a right"
   }
 };
 

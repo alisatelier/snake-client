@@ -11,7 +11,7 @@ let movementInterval = null;
 const getCurrentDirection = () => currentDirection;
 const setCurrentDirection = (key) => { currentDirection = key; };
 
-// handle snek moving by single key press
+// handle player moving by single key press
 const setMovementInterval = (connection, key) =>{
   const move = userMovements[key];
   if(!move) return

@@ -8,19 +8,16 @@ const connect = function() {
   });
 
   conn.setEncoding("utf8");
+  conn.on("connect", () => {
+    console.log("sup. the snek knows you here now.");
+    conn.write(`Name: ${userName}`);
+  });
 
   conn.on("data", (data) => {
     console.log(data);
   });
 
-  conn.on("connect", () => {
-    console.log("sup. the snek knows you here now.");
-  });
 
-  conn.on("connect", () => {
-    conn.write(`Name: ${userName}`);
-
-  });
 
   return conn;
 };

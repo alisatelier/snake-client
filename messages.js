@@ -1,7 +1,6 @@
 const { userMessages } = require("./constants");
 
-// container for message keys
-
+// container for message keys. Prevents message from remaining on screen
 lastMessageKey = null;
 
 const handleMessages = (key, connection) => {
@@ -12,7 +11,7 @@ const handleMessages = (key, connection) => {
 
    setTimeout(() => {
       connection.write("Say: ");
-    }, 3000);
+    }, 5000);
 };
 
 
