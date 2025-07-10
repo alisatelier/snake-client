@@ -11,7 +11,7 @@ const handleMessages = (key, connection) => {
 
   setTimeout(() => {
     connection.write("Say: ");
-  }, 5000);
+  }, 7000);
 };
 
 
