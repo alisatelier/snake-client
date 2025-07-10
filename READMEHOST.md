@@ -12,6 +12,8 @@ Control your snek using the keyboard and slither your way to glory:
 
 Avoid crashing, stay in control, and don't forget to **watch your tail** 🐍
 
+---
+
 ## 📦 Clone & Install
 
 To get started:
@@ -19,6 +21,7 @@ To get started:
 ```bash
 git clone https://github.com/alisatelier/snake-client.git
 ```
+---
 
 ## 🛠 Setup & Run
 
@@ -107,6 +110,8 @@ Press number keys (`0`–`9`) to send a sassy snek message:
 |  9  | ctrl + c or u ded    | final warning — you're the apex predator  
 ```
 
+---
+
 ## 💻 Dev Notes
 
 **Built With:**
@@ -120,6 +125,8 @@ Press number keys (`0`–`9`) to send a sassy snek message:
 - Larry the AI bot who said, "You're gonna scream, but you're gonna learn." (Jk. Larry isn't sassy enough for such comments).
 - The fellow sneks who debugged this with slimmies (like a snek shimmy) of solidarity.
 - And to anyone who’s ever 🟩 ssslithered faster at the wrong moment and crashed… you are not alone.
+
+---
 
 ## 📋 Credits
 
@@ -140,7 +147,7 @@ Kudos to the original brain behind this danger noodle-powered madness.
 
 Long live the snek queen [Tania Rascia](https://github.com/taniarascia/snek) 👑🐍
 
-
+---
 
 ## 🎁 Bonus: 3-Character Snek Name Ideas
 
