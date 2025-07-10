@@ -19,6 +19,13 @@ const handleUserInput = function(key) {
     process.exit();
   }
 
+ 
+  handleMovement(key);
+  handleMessages(key);
+};
+
+// container for movement keys
+const handleMovement = (key) => {
   switch (key) {
     case 'w':
       connection.write("Move: up");
@@ -38,6 +45,28 @@ const handleUserInput = function(key) {
       break;
   }
 };
+
+// container for message keys
+const handleMessages = (key) => {
+  const messages = {
+    "1": "Say: slitherin on thru",
+    "2": "Say: shedding my past & u",
+    "3": "Say: ssspeedy lil snek",
+    "4": "Say: das in cold blood",
+    "5": "Say: watch your tail",
+    "6": "Say: hissss off",
+    "7": "Say: ssssry not sssry",
+    "8": "Say: NOM NOM NNOM",
+    "9": "Say: ctrl + c or u ded",
+    "0": "Say: who dis dangr noodl"
+  };
+  if (messages[key]) {
+    connection.write(messages[key]);
+  }
+};
+
+
+
 
 
 module.exports = {
