@@ -132,11 +132,11 @@ Still thinks “hissss off” is peak comedy.
 
 **Educational Remake:**
 
-Big thanks to Lighthouse Labs for assigning the project that made us remake Snake with Node, TCP, and more stress than an actual pit of vipers.
+Thanks to Lighthouse Labs for assigning the project that made us remake Snake with Node, TCP, and more stress than an actual pit of vipers.
 
 **Original Author:**
 
-Thanks to the original brain behind this danger noodle-powered madness.
+Kudos to the original brain behind this danger noodle-powered madness.
 
 Long live the snek queen [Tania Rascia](https://github.com/taniarascia/snek) 👑🐍
 
