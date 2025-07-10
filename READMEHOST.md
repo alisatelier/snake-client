@@ -40,7 +40,7 @@ node run play
 
 ### Terminal 2: Snek Controller
 
-This is where you join the game and control your snek. It’s also where your snek’s log messages (moves, taunts, etc.) will appear.
+This is where you join the game and control your snek. It’s also where your snek’s broadcast messages (moves, taunts, etc.) will appear.
 
 #### Snek Name:
 
@@ -61,9 +61,11 @@ replace 'SNK' with your name of choice. Game will default to `SNK` if no argumen
 - ❌ No spaces
 - ❌ No emojis
 
----
 
-## 🗺️ Ssslither the Grid
+##### ** Muliplayer in Name, Not Function
+  This game does not have a firewall, therefore the game is intended to be played on your own computer. Connecting to public internet is **not recommended**.
+
+## 🗺️ Slither the Grid
 
 Use **WASD** keys to control your snek:
 
@@ -74,6 +76,8 @@ Use **WASD** keys to control your snek:
 |  a  |  Move Left   | ⬅️:  to the left, to the left   :⬅️ |
 |  s  |  Move Down   | ⬇️:        down we go!          :⬇️ |
 |  d  |  Move Right  | ➡️:    two wrongs !== a right   :➡️ |
+
+ps. three lefts do
 ```
 ---
 
@@ -102,7 +106,7 @@ Press number keys (`0`–`9`) to send a sassy snek message:
 |  2  | shedding my past & u | synonymous with 'eat my dust'
 |  3  | ssspeedy lil snek    | facts: declare your dominance
 |  4  | das in cold blood    | when another player cuts you off 🙄
-|  5  | watch your tail      | friendly(ish) warning... or a subtle threat
+|  5  | watch ur tail        | friendly(ish) warning... or a subtle threat
 |  6  | hissss off           | snek equivalent of flipping the table 
 |  7  | ssssry not sssry     | when you steal their space *and* make em crash
 |  8  | NOM NOM NNOM         | when you eat a good pixel or feel unhinged
