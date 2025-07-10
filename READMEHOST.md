@@ -27,7 +27,6 @@ git clone https://github.com/alisatelier/snake-client.git
 
 To play Snek, you'll need `two terminal windows` open:
 
----
 
 ### Terminal 1: Game Arena
 
@@ -154,7 +153,6 @@ Long live the snek queen [Tania Rascia](https://github.com/taniarascia/snek) ðŸ‘
 Struggling to name your snek? Hereâ€™s some inspo.  
 All names are 3-character, alphanumeric, and full of bite.
 
----
 
 ### Sassy Sneks
 | Name | Vibe                            |
