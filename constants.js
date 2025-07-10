@@ -1,4 +1,4 @@
-const IP = 'localhost';
+const IP = process.argv[3] || 'localhost';
 const PORT = 50541;
 
 const userName = process.argv[2] || "SNK";
@@ -13,7 +13,7 @@ const speedSettings = {
 const setSpeed = {
   increase: "🟩:  sssspeed mode: activated  :🟩",
   decrease: "🟥:    woah there lil guy      :🟥",
-  reset: "🟨:     ahhh that's better     :🟨",
+  reset: "🟨:      ahhh thats better     :🟨",
 
 };
 
@@ -22,7 +22,7 @@ const userMessages = {
   "2": "Say: shedding my past & u",
   "3": "Say: ssspeedy lil snek",
   "4": "Say: das in cold blood",
-  "5": "Say: watch your tail",
+  "5": "Say: watch ur tail",
   "6": "Say: hissss off",
   "7": "Say: ssssry not sssry",
   "8": "Say: NOM NOM NNOM",
@@ -53,8 +53,8 @@ module.exports = {
   IP,
   PORT,
   userName,
-  userMessages,
-  userMovements,
   speedSettings,
   setSpeed,
+  userMessages,
+  userMovements,
 };
