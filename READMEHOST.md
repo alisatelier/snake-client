@@ -6,9 +6,9 @@ Welcome to Snek – a hiss-terically sssatisfying terminal-based game where you'
 
 Control your snek using the keyboard and slither your way to glory:
 
-- Use `W`, `A`, `S`, `D` to move up, left, down, and right.
+- Use `w`, `a`, `s`, `d` to move up, left, down, and right.
 - Press number keys (`0`–`9`) to send sassy snek messages.
-- Use `=`, `-`, and `.` to change your snek’s speed.
+- Use `+/=`, `-`, and `.` to change your snek’s speed.
 
 Avoid crashing, stay in control, and don't forget to **watch your tail** 🐍
 
@@ -22,31 +22,36 @@ git clone https://github.com/alisatelier/snake-client.git
 
 ## 🛠 Setup & Run
 
-To play Snek, you'll need **two terminal windows** open:
+To play Snek, you'll need `two terminal windows` open:
 
 ---
 
-### Terminal 1: Start the Game Server
+### Terminal 1: Game Arena
+
+Think of this as the main screen. It shows the game board where all sneks move around.
 
 ```bash
 cd snek-multiplayer
 npm install
-node play.js
+node run play
 ```
 
+### Terminal 2: Snek Controller
 
-### Terminal 2: Customize Your Snek Name & Play
+This is where you join the game and control your snek. It’s also where your snek’s log messages (moves, taunts, etc.) will appear.
 
-Want to show up on the board as `L8R`, `OMG`, or `VIP`?  
+#### Snek Name:
+
+Want to show up on the board as `L8R`, `VPR`, or `DED`?  
 You can set a 3-character alphanumeric snek name using a command-line argument:
 
 ```bash
 node play.js SNK
 ```
 
-replace 'SNK' with your name of choice. Game will default to SNK if no argument selected.
+replace 'SNK' with your name of choice. Game will default to `SNK` if no argument is applied.
 
-### Snek Name Rules
+#### Snek Name Rules
 
 - Max **3 characters**
 - **Letters and numbers only** (`A–Z`, `0–9`)
@@ -60,43 +65,47 @@ replace 'SNK' with your name of choice. Game will default to SNK if no argument 
 
 Use **WASD** keys to control your snek:
 
-| Key | Action     | Log Message                  |
-| --- | ---------- | ---------------------------- |
-| `W` | Move Up    | ⬆️: movin up in the world    |
-| `A` | Move Left  | ⬅️: to the left, to the left |
-| `S` | Move Down  | ⬇️: down we go!              |
-| `D` | Move Right | ➡️: two wrongs !== a right   |
-
+```markdown
+| Key |  Action      | Log Message                         |
+| --- |  ----------  | ---------------------------------   |
+|  w  |  Move Up     | ⬆️:    movin up in the world    :⬆️ |
+|  a  |  Move Left   | ⬅️:  to the left, to the left   :⬅️ |
+|  s  |  Move Down   | ⬇️:        down we go!          :⬇️ |
+|  d  |  Move Right  | ➡️:    two wrongs !== a right   :➡️ |
+```
 ---
 
 ## 🟦 Game Speed Controls
 
 Control your snek’s pace with these keys:
 
-| Key(s)    | Action                   | Log Message                  |
-| --------- | ------------------------ | ---------------------------- |
-| `=` / `+` | Ssslither on faster      | 🟩: sssspeed mode: activated |
-| `-`       | Ssslow the pace down     | 🟥: woah there lil guy       |
-| `.`       | Return to normal ssspeed | 🟨: ahhh back to basics      |
-
+```markdown
+| Key(s)    | Action                   | Log Message                      |
+| --------- | ------------------------ | -------------------------------- |
+|   = / +   | Ssslither on faster      | 🟩: sssspeed mode: activated :🟩 |
+|     -     | Ssslow the pace down     | 🟥:    woah there lil guy    :🟥 |
+|     .     | Return to normal ssspeed | 🟨:    ahhh that's better    :🟨 |
+```
 ---
 
 ## 💬 Snek Messages
 
 Press number keys (`0`–`9`) to send a sassy snek message:
 
-| Key | Message              |
-| --- | -------------------- |
-| `0` | who dis dangr noodl  |
-| `1` | slitherin on thru    |
-| `2` | shedding my past & u |
-| `3` | ssspeedy lil snek    |
-| `4` | das in cold blood    |
-| `5` | watch your tail      |
-| `6` | hissss off           |
-| `7` | ssssry not sssry     |
-| `8` | NOM NOM NNOM         |
-| `9` | ctrl + c or u ded    |
+```markdown
+| Key | Broadcast Message    | Notes
+| --- | -------------------- | --------------------
+|  0  | who dis dangr noodl  | makes a great welcome
+|  1  | slitherin on thru    | kinda like 'excuse me' but hissy
+|  2  | shedding my past & u | synonymous with 'eat my dust'
+|  3  | ssspeedy lil snek    | facts: declare your dominance
+|  4  | das in cold blood    | when another player cuts you off 🙄
+|  5  | watch your tail      | friendly(ish) warning... or a subtle threat
+|  6  | hissss off           | snek equivalent of flipping the table 
+|  7  | ssssry not sssry     | when you steal their space *and* make em crash
+|  8  | NOM NOM NNOM         | when you eat a good pixel or feel unhinged
+|  9  | ctrl + c or u ded    | final warning — you're the apex predator  
+```
 
 ## 💻 Dev Notes
 
@@ -106,30 +115,88 @@ Press number keys (`0`–`9`) to send a sassy snek message:
 - 🧠 Brain cells (some were lost)
 - ❤️ Terminal love and caffeine
 
-
 **Special Thanks To:**
 
 - Larry the AI bot who said, "You're gonna scream, but you're gonna learn." (Jk. Larry isn't sassy enough for such comments).
 - The fellow sneks who debugged this with slimmies (like a snek shimmy) of solidarity.
 - And to anyone who’s ever 🟩 ssslithered faster at the wrong moment and crashed… you are not alone.
 
-## 🐍 Credits
+## 📋 Credits
 
 This snek ain't solo.
 
 **Host Developer:**
 
-[Ali Bird](https://github.com/alisatelier)
-
-Wrote this snek game with nothing but Node.js, her aesthetic custom VS Code theme, sheer willpower, and an _alarming_ number of terminal screams. Lost count of how many times `ctrl + c` saved her life.  
+[Ali Bird](https://github.com/alisatelier) wrote this snek game with nothing but Node.js, an aestheticaly pleasing custom VS Code theme, sheer willpower, and an _alarming_ number of terminal screams. Lost count of how many times `ctrl + c` saved her life.  
 Still thinks “hissss off” is peak comedy.
 
-**Educational Remake**
+**Educational Remake:**
 
 Big thanks to Lighthouse Labs for assigning the project that made us remake Snake with Node, TCP, and more stress than an actual pit of vipers.
 
-**Original Author**
+**Original Author:**
 
 Thanks to the original brain behind this danger noodle-powered madness.
 
 Long live the snek queen [Tania Rascia](https://github.com/taniarascia/snek) 👑🐍
+
+
+
+## 🎁 Bonus: 3-Character Snek Name Ideas
+
+Struggling to name your snek? Here’s some inspo.  
+All names are 3-character, alphanumeric, and full of bite.
+
+---
+
+### Sassy Sneks
+| Name | Vibe                            |
+|------|---------------------------------|
+| `OMG` | Obvious Main Girl / Guy        |
+| `L8R` | Slither fast, peace out        |
+| `BYE` | Exit strategy activated        |
+| `BFF` | Until you bite me              |
+| `YAS` | Fierce and fabulous            |
+| `EEK` | Cute panic                     |
+| `MEW` | Wrong animal, right chaos      |
+| `HEH` | Gremlin giggle                 |
+| `DED` | For when they get too close    |
+| `LOL` | Laughing while wrecking you    |
+| `GTG` | Gotta terminate [you] guys     |
+| `BOI` | Try me. I dare you.            |
+| `GRR` | All jungle, no chill           |
+
+---
+
+### Its a Jungle in Here
+| Name | Vibe                            |
+|------|---------------------------------|
+| `ZOO` | It’s a whole ecosystem in here |
+| `SSS` | Maximum hisssss                |
+| `GPS` | Global Python Ssssytem         |
+| `VIP` | Very Important Python          |
+| `COB` | Cobra in disguise              |
+| `RTL` | Rattler in disguise            |
+| `VPR` | Viper in disguise              |
+| `DMV` | Danger Management Viper        |
+
+
+---
+
+### Ferda Code-Sneks
+
+| Name | Vibe                               |
+|------|------------------------------------|
+| `404` | Snek not found                    |
+| `DEV` | Your logs won’t save you now.     |
+| `CPU` | Cold-blooded processing unit      |
+| `BUG` | Slithered into your logic         |
+| `EOF` | End of Fang                       |
+| `VAR` | Variable threat                   |
+| `LET` | Lethal Every Time                 |
+| `GIT` | Committed to chaos                |
+| `NPM` | Noodl Package Manager             |
+| `CLI` | Command Line Instincts            |
+| `LOX` | Locks your thread *and* your ankles |
+| `NAH` | Not A Handler (also: just rude)   |
+
