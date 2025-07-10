@@ -1,5 +1,7 @@
-const handleMovement = require("./movement.js");
-const handleMessages = require("./messages.js")
+const { handleMovement, getCurrentDirection, setCurrentDirection, setMovementInterval } = require("./movement.js");
+const handleMessages = require("./messages.js");
+const { increaseSpeed, decreaseSpeed, resetSpeed } = require("./speed");
+const { userMovements } = require("./constants.js")
 
 let connection;
 
@@ -15,12 +17,36 @@ const setupInput = function(conn) {
   return stdin;
 };
 
-// message for exiting the game via: CTRL + C and clearing the screen on first key press/
+
 const handleUserInput = function(key) {
 
+  // message for exiting the game via: CTRL + C
   if (key === '\u0003') {
     console.log("see ya!");
     process.exit();
+  }
+
+  //handles speed keys
+  const dir = getCurrentDirection();
+  if (key === '=' || key === '+') {
+    increaseSpeed(connection);
+    if (userMovements[dir]) {
+      setMovementInterval(connection, dir);
+    }
+    return;
+  }
+
+  if (key === '-') {
+    decreaseSpeed(connection);
+    if (userMovements[dir]) {
+      setMovementInterval(connection, dir);
+    }
+    return;
+  }
+  if (key === '.') {
+    resetSpeed();
+    setCurrentDirection(null);
+    return;
   }
 
   handleMovement(key, connection, clearFirstScreen);
@@ -41,24 +67,3 @@ const clearFirstScreen = () => {
 module.exports = {
   setupInput,
 };
-
-
-// let lastDirection = null;
-// let resetTimer = null;
-// const handleMovement = (key) => {
-//   if (userMovements[key]) {
-//     connection.write(userMovements[key].command);
-
-//     if (key !== lastDirection) {
-//       console.log(userMovements[key].log);
-//     }
-
-//     clearTimeout(resetTimer);
-//     resetTimer = setTimeout(() => {
-//       lastDirection = null;
-//     }, 2000);
-
-//     lastDirection = key;
-
-//   }
-// };

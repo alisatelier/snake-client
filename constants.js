@@ -3,7 +3,13 @@ const PORT = 50541;
 
 const userName = "L8R";
 
-let snekSpeed = "150"
+const speedSettings = {
+  default: 150,
+  step: 50, 
+  min: 50,
+  max: 350,
+}
+
 
 const userMessages = {
   "1": "Say: slitherin on thru",
@@ -41,7 +47,7 @@ module.exports = {
   IP,
   PORT,
   userName,
-  snekSpeed,
   userMessages,
   userMovements,
+  speedSettings,
 };
