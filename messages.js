@@ -1,14 +1,18 @@
 const { userMessages } = require("./constants");
 
 // container for message keys
+
+lastMessageKey = null;
+
 const handleMessages = (key, connection) => {
-  if (userMessages[key]) {
+  if (userMessages[key] && key !== lastMessageKey) {
     connection.write(userMessages[key]);
+    lastMessageKey = key;
   }
 
    setTimeout(() => {
       connection.write("Say: ");
-    }, 1500);
+    }, 3000);
 };
 
 
