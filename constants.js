@@ -16,6 +16,9 @@ const setSpeed = {
   reset: "🟨:      ahhh thats better     :🟨",
 };
 
+const playerEnter = "👀:  the snek knows u here now :👀"
+const playerExit = `✌🏽 :         see ya ${userName}!        :✌🏽`;
+
 
 const userMessages = {
   "1": "Say: slitherin on thru",
@@ -33,19 +36,19 @@ const userMessages = {
 const userMovements = {
   "w": {
     command: "Move: up",
-    log: "⬆️:    movin up in the world    :⬆️"
+    log: "⬆️ :   movin up in the world    :⬆️"
   },
   "a": {
     command: "Move: left",
-    log: "⬅️:  to the left, to the left   :⬅️"
+    log: "⬅️ : to the left, to the left   :⬅️"
   },
   "s": {
     command: "Move: down",
-    log: "⬇️:        down we go!          :⬇️"
+    log: "⬇️ :       down we go!          :⬇️"
   },
   "d": {
     command: "Move: right",
-    log: "➡️:    two wrongs !== a right   :➡️"
+    log: "➡️ :   two wrongs !== a right   :➡️"
   }
 };
 
@@ -55,6 +58,8 @@ module.exports = {
   userName,
   speedSettings,
   setSpeed,
+  playerEnter,
+  playerExit,
   userMessages,
   userMovements,
 };

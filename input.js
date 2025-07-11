@@ -1,7 +1,7 @@
 const { handleMovement, getCurrentDirection, setCurrentDirection, setMovementInterval } = require("./movement.js");
 const handleMessages = require("./messages.js");
 const { increaseSpeed, decreaseSpeed, resetSpeed } = require("./speed");
-const { userMovements } = require("./constants.js");
+const { userMovements, playerExit } = require("./constants.js");
 
 let connection;
 
@@ -22,7 +22,7 @@ const handleUserInput = function(key) {
 
   // message for exiting the game via: CTRL + C
   if (key === '\u0003') {
-    console.log("✌🏽:           see ya!          :✌🏽")
+    console.log(playerExit)
         process.exit();
   }
 

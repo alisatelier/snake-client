@@ -126,8 +126,8 @@ Press number keys (`0`–`9`) to send a sassy snek message:
 **Special Thanks To:**
 
 - Larry the AI bot who said, "You're gonna scream, but you're gonna learn." (Jk. Larry isn't sassy enough for such comments).
-- The fellow sneks who debugged this with slimmies (like a snek shimmy) of solidarity.
-- And to anyone who’s ever 🟩 ssslithered faster at the wrong moment and crashed… you are not alone.
+- The fellow sneks who debugged this with slimmys (like a snek slither-shimmy) of solidarity.
+- And to anyone who’s ever ssslithered faster at the wrong moment and crashed… you are not alone.
 
 ---
 

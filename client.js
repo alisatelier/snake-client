@@ -1,5 +1,5 @@
 const net = require("net");
-const { IP, PORT, userName } = require("./constants");
+const { IP, PORT, userName, playerEnter } = require("./constants");
 
 const connect = function() {
   const conn = net.createConnection({
@@ -9,7 +9,7 @@ const connect = function() {
 
   conn.setEncoding("utf8");
   conn.on("connect", () => {
-    console.log("👀:  the snek knows u here now :👀");
+    console.log(playerEnter);
     conn.write(`Name: ${userName}`);
   });
 
