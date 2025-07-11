@@ -14,8 +14,8 @@ const setSpeed = {
   increase: "🟩:  sssspeed mode: activated  :🟩",
   decrease: "🟥:    woah there lil guy      :🟥",
   reset: "🟨:      ahhh thats better     :🟨",
-
 };
+
 
 const userMessages = {
   "1": "Say: slitherin on thru",

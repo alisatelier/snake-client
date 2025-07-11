@@ -27,6 +27,7 @@ const decreaseSpeed = (connection) => {
 const resetSpeed = () => {
   snekSpeed = speedSettings.default;
   console.log(setSpeed.reset);
+  return snekSpeed;
 };
 
 

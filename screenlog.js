@@ -11,6 +11,7 @@ const logTemporary = (message, duration = 7000) => {
       process.stdout.write('\x1b[2K'); // clear
     }
   }, duration);
+  
 };
 
 module.exports = logTemporary;
