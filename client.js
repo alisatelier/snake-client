@@ -9,7 +9,7 @@ const connect = function() {
 
   conn.setEncoding("utf8");
   conn.on("connect", () => {
-    console.log("sup. the snek knows you here now.");
+    console.log("👀:  the snek knows u here now :👀");
     conn.write(`Name: ${userName}`);
   });
 

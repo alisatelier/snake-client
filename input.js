@@ -22,8 +22,8 @@ const handleUserInput = function(key) {
 
   // message for exiting the game via: CTRL + C
   if (key === '\u0003') {
-    console.log("see ya!");
-    process.exit();
+    console.log("✌🏽:           see ya!          :✌🏽")
+        process.exit();
   }
 
   //handles speed keys
