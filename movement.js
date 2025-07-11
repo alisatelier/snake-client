@@ -37,7 +37,7 @@ const handleMovement = (key, connection, clearFirstScreen) => {
 
         clearInterval(movementInterval);
 
-        // displays when first key is pressed, then timesout to clear display.
+        // displays when first key is pressed, then timesout to clear log.
         if (!clearScreen) {
           connection.write("Say: slither me timbers");
           setTimeout(() => {
@@ -59,5 +59,5 @@ module.exports = {
   handleMovement,
   getCurrentDirection,
   setCurrentDirection,
-  setMovementInterval
+  setMovementInterval,
 };

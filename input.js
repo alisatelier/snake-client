@@ -53,6 +53,8 @@ const handleUserInput = function(key) {
   handleMessages(key, connection);
 };
 
+
+// clears screen for first message upon moving.
 let screenCleared = false;
 
 const clearFirstScreen = () => {
@@ -62,7 +64,6 @@ const clearFirstScreen = () => {
     screenCleared = true;
   }
 };
-
 
 module.exports = {
   setupInput,
