@@ -40,7 +40,7 @@ node run play
 
 ### Terminal 2: Snek Controller
 
-This is where you join the game and control your snek. It’s also where your snek’s broadcast messages (moves, taunts, etc.) will appear.
+This is where you join the game and control your snek. It’s also where your snek’s log messages (moves, speed, etc.) will appear. You should remain in the snake-client folder for this terminal.
 
 #### Snek Name:
 
