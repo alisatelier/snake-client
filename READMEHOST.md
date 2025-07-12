@@ -20,6 +20,7 @@ To get started:
 
 ```bash
 git clone https://github.com/alisatelier/snake-client.git
+cd snake-client
 ```
 ---
 
@@ -35,7 +36,7 @@ Think of this as the main screen. It shows the game board where all sneks move a
 ```bash
 cd snek-multiplayer
 npm install
-node run play
+npm run play
 ```
 
 ### Terminal 2: Snek Controller

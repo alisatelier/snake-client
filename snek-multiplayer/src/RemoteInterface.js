@@ -40,7 +40,7 @@ class RemoteInterface {
 
   idleBoot(client) {
     try {
-      client.write('☠️:  you ded cuz you idled   :☠️\n', () => client.end());
+      client.write('⏰:     u ded cuz u idled      :⏰\n', () => client.end());
     } catch (e) {
       // nothing to do really.
     }
