@@ -16,8 +16,15 @@ const setSpeed = {
   reset: "🟨:      ahhh thats better     :🟨",
 };
 
-const playerEnter = "👀:  the snek knows u here now :👀"
+const playerEnter = `👀:  the snek knows u here now :👀`;
 const playerExit = `✌🏽 :         see ya ${userName}!        :✌🏽`;
+
+const idleMessage = '⏰:     u ded cuz u idled      :⏰\n';
+const broadcastLogEnter = `🐍:     new snek gon get u     :🐍`;
+const broadcastLogExit = `👋🏼:      snek ded or bye       :👋🏼`;
+
+const broadcastLogCrash = '☠️ :   you crashed, so you ded  :☠️';
+const broadcastLogHitSnake = '🕹️ :u hit another snake so u ded:🕹️';
 
 
 const userMessages = {
@@ -60,6 +67,11 @@ module.exports = {
   setSpeed,
   playerEnter,
   playerExit,
+  idleMessage,
+  broadcastLogEnter,
+  broadcastLogExit,
+  broadcastLogCrash,
+  broadcastLogHitSnake,
   userMessages,
   userMovements,
 };

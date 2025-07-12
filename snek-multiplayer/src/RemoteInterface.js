@@ -5,6 +5,7 @@ const {
 
 const net = require('net');
 const logTemporary = require("../../screenlog.js");
+const { idleMessage, broadcastLogEnter, broadcastLogExit } = require("../../constants.js");
 /**
  * @class UserInterface
  *
@@ -40,7 +41,7 @@ class RemoteInterface {
 
   idleBoot(client) {
     try {
-      client.write('⏰:     u ded cuz u idled      :⏰\n', () => client.end());
+      client.write(idleMessage, () => client.end());
     } catch (e) {
       // nothing to do really.
     }
@@ -67,10 +68,10 @@ class RemoteInterface {
     for (let other of this.clients) {
       if (other !== client) {
         logTemporary(`competition! a new snek has slithered in\n there are now ${this.clients.length} sneks slithering...`);
-        other.write("🐍:     new snek gon get u     :🐍");
+        other.write(broadcastLogEnter);
 
+      }
     }
-  }
     client.on('error', (err) => {
       console.log(`⚠️ Snek connection error: ${err.message}`);
       this.handleClientEnded(client); // clean up
@@ -97,7 +98,7 @@ class RemoteInterface {
     for (const other of this.clients) {
       if (other !== client) {
         logTemporary(`a snek has shed its connection \n${this.clients.length} sneks remain`);
-         other.write("👋🏼:      snek ded or bye       :👋🏼");
+        other.write(broadcastLogExit);
 
       }
     }
